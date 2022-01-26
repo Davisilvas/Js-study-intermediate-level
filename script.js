@@ -1,4 +1,4 @@
-function h1Click(){
+/*function h1Click(){
     console.log("Executando a função")
 };
 
@@ -19,4 +19,11 @@ function mouseOver(elemento){
 
 function mouseOut(elemento){
     elemento.style.backgroundColor = "cornflowerblue";
+} */
+function loaded(){
+    
+    let t = document.getElementById("titulo");
+
+    t.innerHTML = "rrr"
+
 }
