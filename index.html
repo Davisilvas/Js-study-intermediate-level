@@ -8,6 +8,11 @@
 
     <style>
 
+        img{
+            width: 200px;
+            margin-bottom: 25px;
+        }
+
         div{
             display: inline-block;
             padding: 20px;
@@ -19,7 +24,7 @@
     </style>
 
 </head>
-<body>
+<body onload="console.log('Página totalmente carregada')">
     <script src="script.js"></script>
 
    <!-- <h1 onclick="alert('Você clicou no h1')">Clique em mim</h1> -->
@@ -29,8 +34,9 @@
   <!-- <h1>Clique em mim</h1>
    <input id = "texto" type = "text" onchange = "changeH1(this)">-->
 
-   <h1>Clique em mim</h1>
-   <div onclick = "hideh1()" >click</div>
+    <img src="https://kanto.legiaodosherois.com.br/w760-h398-gnw-cfill-q80/wp-content/uploads/2021/11/legiao_l0n6KfvQj_OT.png.jpeg">
+   <br>
+   <div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">click</div>
 
 </body>
 </html>
