@@ -7,34 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript intermediário</title>
     <script>
-        function loaded(){
-            let t = document.getElementById("titulo");
-            /*t.onclick = clicado;
-            t.onmouseover = mudarTexto;
-            t.onmouseout = voltarTexto;*/
-            t.addEventListener("click", clicado)
-            t.addEventListener("mouseover", mudarTexto)
-            t.addEventListener("mouseout", voltarTexto)
-        }    
-        
-        function mudarTexto(){
-            this.innerHTML = "mudar textinho"
+
+        function f(e){
+            console.log("teste");
+            //console.log(this);
+            console.log(e);
         }
 
-        function voltarTexto(){
-            this.innerHTML = "Davi"
+        function f1(e){
+            console.log("teste f1");
+            //console.log(this);
+            console.log(e);
+            console.log(e.target);
         }
 
-        function clicado(){
-            this.innerHTML = "clicado"
+        window.onload = function(){
+            let h1 = document.getElementsByTagName("h1")[0];
+
+            h1.addEventListener("click", f1);
         }
 
     </script>
 </head>
-<body onload="loaded()">
+<body>
     <!--<script src="script.js"></script>-->
 
-    <h1 id="titulo">Teste</h1>
+    <h1 onclick="f()">Teste</h1>
 
 
 </body>
