@@ -8,24 +8,18 @@
     <title>Javascript intermediário</title>
     <script>
 
-        //let n = Math.PI;
-        //let n = Math.sqrt(16);
-        //let n = Math.pow(2,3)
+        let a = {nome: "Davi", nota: 10.0}
+        let b = '{"nome":"Maria", "nota":11.0}'
 
-        //let n = Math.round(Math.random()* 10);
-  
-        //let n = Math.round(5.6)
+        let a2 = JSON.stringify(a);
+        let b2 = JSON.parse(b);
 
-        //let n = Math.floor(5.99999999);
+        console.log(a);
+        console.log(b);
+        console.log(a2);
+        console.log(b2);
 
-        let n = Math.ceil(5.000000001);
-        console.log(n);
-         
-
-
-
-
-
+        console.log(b2.nome);
 
     </script>
 </head>
@@ -34,4 +28,4 @@
     
 
 </body>
-</html>
+</html> 
