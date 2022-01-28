@@ -6,26 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, init ial-scale=1.0">
     <title>Javascript intermediário</title>
-    <script>
+    <script> 
+        
+        onload = function(){
+            let nome = localStorage.getItem("nome");
+            let h1 = document.getElementById("nome");
+            h1.innerHTML = nome;
+        }
 
-        let a = {nome: "Davi", nota: 10.0}
-        let b = '{"nome":"Maria", "nota":11.0}'
+        function atualizar(elemento){
+            let valor = elemento.value;
+            console.log(valor);
 
-        let a2 = JSON.stringify(a);
-        let b2 = JSON.parse(b);
+            let h1 = document.getElementById("nome");
+            h1.innerHTML = valor;
 
-        console.log(a);
-        console.log(b);
-        console.log(a2);
-        console.log(b2);
-
-        console.log(b2.nome);
+            localStorage.setItem("nome", valor)
+        }
 
     </script>
 </head>
 <body>
     <!--<script src="script.js"></script>-->
-    
+    <h1 id="nome"> </h1>
+    <input type="text" oninput="atualizar(this)">
+
 
 </body>
 </html> 
