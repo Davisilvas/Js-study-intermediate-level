@@ -7,35 +7,22 @@
     <meta name="viewport" content="width=device-width, init ial-scale=1.0">
     <title>Javascript intermediário</title>
     <script> 
-        
-      /*  onload = function(){
-            let nome = localStorage.getItem("nome");
-            let h1 = document.getElementById("nome");
-            h1.innerHTML = nome;
-        }
 
-        function atualizar(elemento){
-            let valor = elemento.value;
-            console.log(valor);
+        let pessoas = ["Davi", "Maria" , "Doly", "Felisberto", "Tonhão", "Ribamar", "Casimiro Miguel"]
 
-            let h1 = document.getElementById("nome");
-            h1.innerHTML = valor;
+    function sortear(){
+        let np = pessoas.length;
+        let ns = Math.floor(Math.random() * np);
 
-            localStorage.setItem("nome", valor)
-        } */
+        document.getElementById("d").innerHTML = pessoas[ns];
 
-        let a = {nome: "Davi", idade: 21};
-        localStorage.setItem("aluno", JSON.stringify(a));
-
-        let b = localStorage.getItem("aluno");
-        console.log(JSON.parse(b));
-
+    }
     </script>
 </head>
 <body>
     <!--<script src="script.js"></script>-->
-    <h1 id="nome"> </h1>
-    <input type="text" oninput="atualizar(this)">
+    <h1 id="d"></h1>
+    <button onclick="sortear()">sortear</button>
 
 
 </body>
