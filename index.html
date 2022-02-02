@@ -7,23 +7,45 @@
     <meta name="viewport" content="width=device-width, init ial-scale=1.0">
     <title>Javascript intermediário</title>
     <script> 
+        /*function mudarCor(){
+            let h = document.getElementsByTagName("h1")[0]
+            h.style.color = "red";            
+        }
 
-        let pessoas = ["Davi", "Maria" , "Doly", "Felisberto", "Tonhão", "Ribamar", "Casimiro Miguel"]
+        function mudarTexto(){
+            let h = document.getElementsByTagName("h1")[0]
+            h.innerHTML = "Novo título"
 
-    function sortear(){
-        let np = pessoas.length;
-        let ns = Math.floor(Math.random() * np);
+            setTimeout (mudarCor, 2500)
+        }*/
 
-        document.getElementById("d").innerHTML = pessoas[ns];
+        var numero = 0;
+        var interval;
 
-    }
+
+        function atualizarTexto(){
+            let h = document.getElementsByTagName("h1")[0];
+            h.innerHTML += " " + numero;
+            numero++
+
+        }
+        
+        function iniciar(){
+
+           interval = setInterval(atualizarTexto, 1500);
+        }
+
+        function parar(){
+            clearInterval(interval);
+        }
+        
     </script>
 </head>
 <body>
     <!--<script src="script.js"></script>-->
-    <h1 id="d"></h1>
-    <button onclick="sortear()">sortear</button>
-
+    <h1>Título</h1>
+    <input onclick= "iniciar()" type="submit" value="iniciar">
+    <input onclick= "parar()" type="submit" value="parar">
 
 </body>
 </html> 
