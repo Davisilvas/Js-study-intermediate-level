@@ -27,3 +27,6 @@ function loaded(){
     t.innerHTML = "rrr"
 
 }
+console.log(loaded())
+// change 01
+// change 02
